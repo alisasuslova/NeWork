@@ -2,7 +2,7 @@ package ru.netology.nework.domain.job
 
 class GetJobByIdUseCase(private val jobListRepository: JobListRepository) {
 
-    fun getJobById(id: Long): Job {
+    fun getJobById(id: Int): Job {
        return jobListRepository.getJobById(id)
     }
 }

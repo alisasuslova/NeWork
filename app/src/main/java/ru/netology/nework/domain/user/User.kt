@@ -1,3 +1,4 @@
+/*
 package ru.netology.nework.domain.user
 
 import ru.netology.nework.domain.job.Job
@@ -12,3 +13,4 @@ data class User(
     val wall: List<Post> = listOf(),
     val jobs: List<Job> = listOf(),
 )
+*/

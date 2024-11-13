@@ -1,3 +1,4 @@
+/*
 package ru.netology.nework.domain.user
 
 class GetUserListUseCase(private val userListRepository: UserListRepository) {
@@ -6,4 +7,4 @@ class GetUserListUseCase(private val userListRepository: UserListRepository) {
         return userListRepository.getUserList()
     }
 
-}
+}*/

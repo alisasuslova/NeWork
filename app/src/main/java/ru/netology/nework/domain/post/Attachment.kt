@@ -1,5 +1,10 @@
 package ru.netology.nework.domain.post
 
-enum class Attachment {
-IMAGE, VIDEO, URL, AUDIO
+class Attachment(
+    val url: String,
+    val type : Enum<TypeAttachment>
+)
+
+enum class TypeAttachment{
+IMAGE, VIDEO, AUDIO
 }

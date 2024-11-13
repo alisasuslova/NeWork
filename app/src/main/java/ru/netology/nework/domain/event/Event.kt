@@ -1,22 +1,34 @@
 package ru.netology.nework.domain.event
 
 import ru.netology.nework.domain.post.Attachment
-import ru.netology.nework.domain.user.User
+import ru.netology.nework.domain.post.Coordinates
+import ru.netology.nework.domain.user.UserPreview
 
 data class Event(
-    val id: Long,
-    val authorAvatar: String,
+    val id: Int,
+    val authorId: Int,
     val author: String,
+    val authorJob:String,
+    val authorAvatar:String,
     val content: String,
-    val published: String,
+    val datetime: String, //($date-time)
+    val published: String, //($date-time)
+    val coords: Coordinates,
     val typeEvent: TypeEvent = TypeEvent.ONLINE,
-    val dateOfEvent: String,
-    val likes: Int = 0,
-    val sharesByMe: Boolean = false,
-    val shares: Int = 0,
-    val attachment: Attachment? = null,
+    val likeOwnerIds: ArrayList<Int>,
+    val likedByMe: Boolean,
 
-    val lastJob: String = "В поиске работы",
-    val participants: List<User> = listOf(),
-    val speakers: List<User> = listOf(),
+    val speakerIds: ArrayList<Int>,
+    val participantsIds: ArrayList<Int>,
+    val participatedByMe: Boolean,
+    val attachment: Attachment,
+
+    val link: String,
+    val users: UserPreview,
+
+
+    /* val likes: Int = 0,
+     val sharesByMe: Boolean = false,
+     val shares: Int = 0,*/
+
 )

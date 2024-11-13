@@ -1,3 +1,4 @@
+/*
 package ru.netology.nework.domain.user
 
 interface UserListRepository {
@@ -7,4 +8,4 @@ interface UserListRepository {
     fun editUser(user: User)
     fun getUserById(id: Long): User
     fun getUserList() : List<User>
-}
+}*/

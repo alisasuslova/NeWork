@@ -1,10 +1,10 @@
 package ru.netology.nework.domain.job
 
 data class Job(
-    val id: Long,
+    val id: Int,
     val name: String,
-    val dateStart: String, //мб дата!
-    val dateEnd: String = "НВ",
-    val profession: String,
-    val url: String
+    val position: String,
+    val start: String, //($date-time)
+    val finish: String = "НВ",
+    val link: String
 )
