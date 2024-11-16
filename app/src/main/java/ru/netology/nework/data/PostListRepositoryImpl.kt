@@ -31,8 +31,7 @@ object PostListRepositoryImpl: PostListRepository {
             false,
             null,
             UserPreview("Name", "avatar"),
-            false,
-            0
+
         )
         postList.add(post0)
     }

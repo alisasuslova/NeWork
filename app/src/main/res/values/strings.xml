@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">NeWork</string>
+    <string name="description_button_plus">Plus</string>
+    <string name="author" >Author_Name</string>
+    <string name="published" >16.11.24 18:36</string>
+    <string name="description_post_menu">Menu</string>
+    <string name="content" >Content_text</string>
+    <string name="description_post_like">Like</string>
+    <string name="description_post_shares">Shares</string>
+    <string name="typeEvent">Online</string>
+    <string name="datetimeOfEvent">31.12.24</string>
+    <string name="link">https://...</string>
+    <string name="description_event_participants">Event_Participants</string>
+    <string name="login">Login</string>
+    <string name="position">Position</string>
+    <string name="basket">Basket</string>
+    <string name="jobName">Job_Name</string>
+    <string name="dateStart">09 января 2023</string>
+    <string name="middle"> - </string>
+    <string name="dateFinish">НВ</string>
+
 </resources>
