@@ -2,5 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple">#6750A4</color>
+    <color name="colorPrimary">#6750a4</color>
+    <color name="colorOnPrimary">#ffffff</color>
+    <color name="colorPrimaryContainer">#eaddff</color>
+    <color name="colorOnPrimaryContainer">#413367</color>
+
 </resources>

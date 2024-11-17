@@ -3,7 +3,7 @@
 
     <style name="Widget.AppTheme.LikeCheckBox"
         parent="Widget.MaterialComponents.CompoundButton.CheckBox">
-        <item name="iconTint">@color/purple</item>
+        <item name="iconTint">@color/colorPrimary</item>
     </style>
 
     <style name="Widget.MaterialComponents.CompoundButton.CheckBox"
@@ -12,6 +12,14 @@
         <item name="useMaterialThemeColors">true</item>
         <item name="android:minWidth">?attr/minTouchTargetSize</item>
         <item name="android:minHeight">?attr/minTouchTargetSize</item>
+    </style>
+
+    <style name="fabstyle" parent="Base.Theme.NeWork">
+        <item name="android:backgroundTint">@color/colorPrimaryContainer</item>
+    </style>
+
+    <style name="appBarstyle" parent="Base.Theme.NeWork">
+        <item name="android:backgroundTint">@color/colorPrimaryContainer</item>
     </style>
 
 </resources>
