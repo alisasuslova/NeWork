@@ -9,15 +9,36 @@
         android:id="@+id/postsFragment"
         android:name="ru.netology.nework.presentation.PostsFragment"
         android:label="fragment_posts"
-        tools:layout="@layout/fragment_posts" />
+        tools:layout="@layout/fragment_posts" >
+        <action
+            android:id="@+id/action_postsFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+        <action
+            android:id="@+id/action_postsFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/eventsFragment"
         android:name="ru.netology.nework.presentation.EventsFragment"
         android:label="fragment_events"
-        tools:layout="@layout/fragment_events" />
+        tools:layout="@layout/fragment_events" >
+        <action
+            android:id="@+id/action_eventsFragment_to_postsFragment"
+            app:destination="@id/postsFragment" />
+        <action
+            android:id="@+id/action_eventsFragment_to_usersFragment"
+            app:destination="@id/usersFragment" />
+    </fragment>
     <fragment
         android:id="@+id/usersFragment"
         android:name="ru.netology.nework.presentation.UsersFragment"
         android:label="fragment_users"
-        tools:layout="@layout/fragment_users" />
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_postsFragment"
+            app:destination="@id/postsFragment" />
+        <action
+            android:id="@+id/action_usersFragment_to_eventsFragment"
+            app:destination="@id/eventsFragment" />
+    </fragment>
 </navigation>
