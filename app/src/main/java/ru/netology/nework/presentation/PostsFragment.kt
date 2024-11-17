@@ -27,6 +27,21 @@ class PostsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // мб в Activity?
+        binding.menuBotton.setOnNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.postsFragment -> {
+                    //переход на postsFragment
+                }
+                R.id.eventsFragment -> {
+                    //переход на eventsFragment
+                }
+                R.id.usersFragment -> {
+                    //переход на usersFragment
+                }
+            }
+            true
+        }
     }
 
     private fun launchEventsFragment() {
