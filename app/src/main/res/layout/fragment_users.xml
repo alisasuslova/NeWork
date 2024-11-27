@@ -12,12 +12,12 @@
         android:layout_height="match_parent"
         tools:listitem="@layout/card_user"/>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+   <!-- <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/menuBotton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_button"
         tools:ignore="MissingConstraints" />
-
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

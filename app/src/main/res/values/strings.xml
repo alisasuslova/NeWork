@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">NeWork</string>
-    <string name="description_button_plus">Plus</string>
+    <string name="description_button_plus_post">PlusPost</string>
+    <string name="description_button_plus_event">PlusEvent</string>
     <string name="author">Author_Name</string>
     <string name="published">16.11.24 18:36</string>
     <string name="description_post_menu">Menu</string>
@@ -18,7 +19,8 @@
     <string name="dateStart">09 января 2023</string>
     <string name="middle"> - </string>
     <string name="dateFinish">НВ</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_post_text">New post text</string>
+    <string name="new_event_text">New event text</string>
+    <string name="day_Of_Event_button">day Of Event Button</string>
 
 </resources>

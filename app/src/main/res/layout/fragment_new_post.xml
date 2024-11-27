@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.NewPost">
+
+
+    <TextView
+        android:id="@+id/newEventText"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:text="@string/new_post_text"
+        app:layout_constraintBottom_toTopOf="@+id/newEventImage"
+        app:layout_constraintEnd_toEndOf="patent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/newEventImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="patent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newEventText" />
+
+    <Button
+        android:id="@+id/removeImageButton"
+        style="@style/fabShape"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Remove"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/newEventImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryContainer"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/bottomAddPhoto"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_photo_camera_24"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/bottomAddAttachment"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_attach_file_24"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/bottomMentionUsers"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/participants_24"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/bottomFollowMap"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_location_on_24"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

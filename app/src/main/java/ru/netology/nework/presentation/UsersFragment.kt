@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.netology.nework.R
-import ru.netology.nework.databinding.FragmentEventsBinding
 import ru.netology.nework.databinding.FragmentUsersBinding
 
 
@@ -31,14 +30,14 @@ class UsersFragment : Fragment() {
 
     private fun launchPostsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, PostsFragment.newInstancePost())
+            .replace(R.id.fragment_container, PostsFragment.newInstancePost())
             .addToBackStack(null)
             .commit()
     }
 
     private fun launchEventsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, EventsFragment.newInstanceEvent())
+            .replace(R.id.fragment_container, EventsFragment.newInstanceEvent())
             .addToBackStack(null)
             .commit()
     }
@@ -50,8 +49,8 @@ class UsersFragment : Fragment() {
 
     companion object {
 
-        fun newInstanceUser() : UsersFragment {
-            return UsersFragment()
-        }
+        val TAG: String = UsersFragment::class.java.simpleName
+        fun newInstanceUser() = UsersFragment()
+
     }
 }

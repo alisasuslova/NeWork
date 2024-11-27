@@ -1,12 +1,10 @@
 package ru.netology.nework.presentation
 
-import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import ru.netology.nework.R
 import ru.netology.nework.databinding.FragmentPostsBinding
 
@@ -24,36 +22,23 @@ class PostsFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // мб в Activity?
-        binding.menuBotton.setOnNavigationItemSelectedListener {
-            when(it.itemId) {
-                R.id.postsFragment -> {
-                    //переход на postsFragment
-                }
-                R.id.eventsFragment -> {
-                    //переход на eventsFragment
-                }
-                R.id.usersFragment -> {
-                    //переход на usersFragment
-                }
-            }
-            true
-        }
+
     }
 
     private fun launchEventsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, EventsFragment.newInstanceEvent())
+            .replace(R.id.fragment_container, EventsFragment.newInstanceEvent())
             .addToBackStack(null)
             .commit()
     }
 
     private fun launchUsersFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.main_container, UsersFragment.newInstanceUser())
+            .replace(R.id.fragment_container, UsersFragment.newInstanceUser())
             .addToBackStack(null)
             .commit()
     }
@@ -66,8 +51,8 @@ class PostsFragment : Fragment() {
 
     companion object {
 
-        fun newInstancePost() : PostsFragment {
-            return PostsFragment()
-        }
+        val TAG: String = PostsFragment::class.java.simpleName
+        fun newInstancePost() = PostsFragment()
+
     }
 }
