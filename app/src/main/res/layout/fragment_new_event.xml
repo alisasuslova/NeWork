@@ -4,83 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.NewPost">
+    tools:context=".presentation.NewEvent">
 
 
     <TextView
-        android:id="@+id/newEventText"
+        android:id="@+id/newPostText"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:text="@string/new_event_text"
-        app:layout_constraintBottom_toTopOf="@+id/newEventImage"
-        app:layout_constraintEnd_toEndOf="patent"
+        app:layout_constraintBottom_toTopOf="@+id/newPostImage"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
     <ImageView
-        android:id="@+id/newEventImage"
+        android:id="@+id/newPostImage"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="patent"
+        android:contentDescription="@string/new_event_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newEventText" />
+        app:layout_constraintTop_toBottomOf="@+id/newPostText" />
 
     <Button
         android:id="@+id/removeImageButton"
-        style="@style/fabShape"
+        style="@style/buttomRemove"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="Remove"
+        android:text="@string/remove"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="@+id/newEventImage"
+        app:layout_constraintBottom_toBottomOf="@+id/newPostImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/bottomMenu"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="@color/colorPrimaryContainer"
-        android:orientation="horizontal"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_menu"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/bottomAddPhoto"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_photo_camera_24"
-            android:background="@android:color/transparent"
-            />
-
-        <ImageButton
-            android:id="@+id/bottomAddAttachment"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_attach_file_24"
-            android:background="@android:color/transparent"
-            />
-
-        <ImageButton
-            android:id="@+id/bottomMentionUsers"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/participants_24"
-            android:background="@android:color/transparent"
-            />
-
-        <ImageButton
-            android:id="@+id/bottomFollowMap"
-            android:layout_width="60dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/baseline_location_on_24"
-            android:background="@android:color/transparent"
-            />
-
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu_fragment"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/dayOfEventButton"

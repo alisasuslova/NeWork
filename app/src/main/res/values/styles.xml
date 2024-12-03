@@ -17,7 +17,7 @@
     </style>
 
     <style name="fabstyle" parent="Base.Theme.NeWork">
-        <item name="android:backgroundTint">@color/colorPrimaryContainer</item>
+        <item name="android:backgroundTint">@color/colorAppBar</item>
         <item name="cornerSize">20%</item>
     </style>
 
@@ -33,6 +33,10 @@
     
     <style name="fabShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerSize">20%</item>
+
+    </style>
+    <style name="buttomRemove" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="color">@color/colorPrimary</item>
 
     </style>
 </resources>

@@ -29,7 +29,7 @@ class PostsFragment : Fragment() {
 
     }
 
-    private fun launchEventsFragment() {
+    /*private fun launchEventsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, EventsFragment.newInstanceEvent())
             .addToBackStack(null)
@@ -41,7 +41,7 @@ class PostsFragment : Fragment() {
             .replace(R.id.fragment_container, UsersFragment.newInstanceUser())
             .addToBackStack(null)
             .commit()
-    }
+    }*/
 
 
     override fun onDestroyView() {

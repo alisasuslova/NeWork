@@ -10,8 +10,13 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import ru.netology.nework.R
 import ru.netology.nework.databinding.ActivityMainBinding
+import ru.netology.nework.databinding.FragmentPostsBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private var _binding: ActivityMainBinding? = null
+    private val binding: ActivityMainBinding
+        get() = _binding ?: throw RuntimeException("ActivityMain == null")
 
     private lateinit var viewModel: MainViewModel
     private lateinit var navController: NavController
@@ -20,14 +25,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //setContentView(R.layout.activity_main)
 
 
 
-        //для названий фрагментов в AppBar
-        /*val navHostFragment = supportFragmentManager
+      /*  //для названий фрагментов в AppBar
+        *//*val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragment_container) as NavHostFragment
         val navController = navHostFragment.navController
-        setupActionBarWithNavController(navController)*/
+        setupActionBarWithNavController(navController)*//*
         navController = Navigation.findNavController(this, R.id.fragment_container)
 
 
@@ -57,7 +63,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             false
-        }
+        }*/
 
+
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

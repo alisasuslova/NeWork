@@ -28,7 +28,7 @@ class EventsFragment : Fragment() {
 
     }
 
-    private fun launchPostsFragment() {
+    /*private fun launchPostsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, PostsFragment.newInstancePost())
             .addToBackStack(null)
@@ -41,7 +41,7 @@ class EventsFragment : Fragment() {
             .addToBackStack(null)
             .commit()
     }
-
+*/
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

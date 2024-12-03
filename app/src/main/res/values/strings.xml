@@ -22,5 +22,20 @@
     <string name="new_post_text">New post text</string>
     <string name="new_event_text">New event text</string>
     <string name="day_Of_Event_button">day Of Event Button</string>
+    <string name="add_photo_button">Add Photo Button</string>
+    <string name="add_attachment_button">Add Attachment Button</string>
+    <string name="mention_users_button">Mention Users Button</string>
+    <string name="follow_map_button">Follow Map Button</string>
+    <string name="remove">Remove</string>
+    <string name="new_event_image">New Event Image</string>
+    <string name="new_post_image">New Post Image</string>
+    <string name="photo">Photo</string>
+    <string name="attachment">Attachment</string>
+    <string name="mention_users">Mention Users</string>
+    <string name="follow_map">Follow Map</string>
+    <string name="posts">Posts</string>
+    <string name="events">Events</string>
+    <string name="users">Users</string>
+
 
 </resources>
