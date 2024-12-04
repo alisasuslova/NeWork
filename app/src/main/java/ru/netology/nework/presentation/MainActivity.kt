@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
       /*  //для названий фрагментов в AppBar
         *//*val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.fragment_container) as NavHostFragment

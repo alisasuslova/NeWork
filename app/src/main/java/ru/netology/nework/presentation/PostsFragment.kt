@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ru.netology.nework.R
 import ru.netology.nework.databinding.FragmentPostsBinding
 
@@ -19,6 +20,24 @@ class PostsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentPostsBinding.inflate(inflater, container, false)
+
+
+
+        binding.listPosts.apply {
+            findNavController().navigate(
+                R.id.action_postsFragment_to_newPost)
+
+        }
+
+
+
+
+
+
+
+
+
+
         return binding.root
     }
 

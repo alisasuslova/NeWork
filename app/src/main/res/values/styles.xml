@@ -39,4 +39,9 @@
         <item name="color">@color/colorPrimary</item>
 
     </style>
+
+    <style name="buttomDone" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="color">@color/black</item>
+
+    </style>
 </resources>

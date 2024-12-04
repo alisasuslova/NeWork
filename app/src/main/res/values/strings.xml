@@ -36,6 +36,12 @@
     <string name="posts">Posts</string>
     <string name="events">Events</string>
     <string name="users">Users</string>
+    <string name="new_post_title">New post</string>
+    <string name="new_event_title">New event</string>
+    <string name="create_post_button">Create Post Button</string>
+    <string name="create_event_button">Create Event Button</string>
+    <string name="back_button">Back Button</string>
+    <string name="account_button">Account Button</string>
 
 
 </resources>
