@@ -5,15 +5,15 @@
     <item
         android:id="@+id/postsFragment"
         android:title="@string/posts"
-        android:icon="@drawable/baseline_create_24"/>
+        android:icon="@drawable/ic_posts"/>
 
     <item
         android:id="@+id/eventsFragment"
         android:title="@string/events"
-        android:icon="@drawable/baseline_calendar_today_24"/>
+        android:icon="@drawable/ic_cal"/>
 
     <item
         android:id="@+id/usersFragment"
         android:title="@string/users"
-        android:icon="@drawable/participants_24"/>
+        android:icon="@drawable/ic_users"/>
 </menu>

@@ -1,4 +1,4 @@
-package ru.netology.nework.data
+package ru.netology.nework.data.repository
 
 import ru.netology.nework.domain.comment.Comment
 import ru.netology.nework.domain.comment.CommentListRepository

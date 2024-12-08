@@ -1,7 +1,5 @@
-package ru.netology.nework.data
+package ru.netology.nework.data.repository
 
-import ru.netology.nework.domain.post.Post
-import ru.netology.nework.domain.post.PostListRepository
 import ru.netology.nework.domain.user.User
 import ru.netology.nework.domain.user.UserListRepository
 

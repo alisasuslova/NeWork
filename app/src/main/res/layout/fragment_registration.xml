@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.RegistrationFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Toolbar
+            android:id="@+id/toolbarRegistration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAppBar"
+            android:elevation="0dp"
+            android:minHeight="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/back_button"
+                    app:icon="@drawable/baseline_arrow_back_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/registrationTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/backButton"/>
+
+                <TextView
+                    android:id="@+id/registrationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registration_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/backButton"
+                    app:layout_constraintTop_toTopOf="parent"
+                    style="@style/appBarTextStyle"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarRegistration">
+
+        <ImageView
+            android:id="@+id/addPhoto"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/add_avatar"
+            android:src="@drawable/circle_cam"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_tv"
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/login_hint"
+            app:helperText="@string/helper_text_login"
+
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name_tv"
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/name_hint"
+            app:helperText="@string/helper_text_name"
+
+
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_tv1"
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/colorPrimary"
+            app:helperText="@string/helper_text_password"
+
+
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_tv2"
+            style="@style/textView"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/colorPrimary"
+            app:helperText="@string/helper_text_password"
+
+
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            style="@style/materialButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:text="@string/login_title"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -89,4 +89,14 @@
         android:name="ru.netology.nework.presentation.NewEvent"
         android:label="fragment_new_event"
         tools:layout="@layout/fragment_new_event" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="ru.netology.nework.presentation.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="ru.netology.nework.presentation.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>

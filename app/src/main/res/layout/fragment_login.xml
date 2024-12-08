@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.NewPost">
+    tools:context=".presentation.LoginFragment">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarPost"
+        android:id="@+id/appBarLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/newPostText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Toolbar
-            android:id="@+id/toolbarPost"
+            android:id="@+id/toolbarLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorAppBar"
@@ -36,32 +35,21 @@
                     android:contentDescription="@string/back_button"
                     app:icon="@drawable/baseline_arrow_back_24"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/newPostTitle"
+                    app:layout_constraintEnd_toStartOf="@+id/loginTitle"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     style="@style/backButton"/>
 
                 <TextView
-                    android:id="@+id/newPostTitle"
+                    android:id="@+id/loginTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/new_post_title"
+                    android:text="@string/login_title"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/backButton"
                     app:layout_constraintTop_toTopOf="parent"
                     style="@style/appBarTextStyle"/>
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/createPostButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="64dp"
-                    android:background="@android:color/transparent"
-                    android:contentDescription="@string/create_post_button"
-                    app:icon="@drawable/baseline_done_24"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    style="@style/backButton"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -69,47 +57,63 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_tv"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:hint="@string/login_hint"
+        app:helperText="@string/helper_text_login"
+        app:layout_constraintBottom_toTopOf="@+id/password_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLogin"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginHorizontal="24dp"
+        android:background="@color/colorTextView"
+        style="@style/textView"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorTextView"
+        android:hint="@string/password_hint"
+        app:helperText="@string/helper_text_password"
+        android:inputType="textPassword"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_tv"
+        app:layout_constraintVertical_bias="0.5"
+        style="@style/textView"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="@string/login_title"
+        app:layout_constraintBottom_toTopOf="@+id/anAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_tv"
+        app:layout_constraintVertical_bias="0.5"
+        style="@style/materialButton"/>
+
     <TextView
-        android:id="@+id/newPostText"
+        android:id="@+id/anAccount"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/new_post_text"
-        app:layout_constraintBottom_toTopOf="@+id/newPostImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarPost" />
-
-    <ImageView
-        android:id="@+id/newPostImage"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="145dp"
-        android:contentDescription="@string/new_post_image"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_nav_menu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPostText" />
-
-    <Button
-        android:id="@+id/removeImageButton"
-        style="@style/materialButton"
-        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="@string/remove"
-        app:layout_constraintBottom_toBottomOf="@+id/newPostImage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav_menu"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/an_account"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu_fragment"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/login_button"
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

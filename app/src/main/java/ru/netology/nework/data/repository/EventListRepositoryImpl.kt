@@ -1,4 +1,4 @@
-package ru.netology.nework.data
+package ru.netology.nework.data.repository
 
 import ru.netology.nework.domain.event.Event
 import ru.netology.nework.domain.event.EventListRepository

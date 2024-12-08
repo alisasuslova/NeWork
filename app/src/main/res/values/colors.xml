@@ -7,5 +7,8 @@
     <color name="colorPrimaryContainer">#E8DEF8</color>
     <color name="colorOnPrimaryContainer">#413367</color>
     <color name="colorAppBar">#FEF7FF</color>
+    <color name="colorTextView">#E6E0E9</color>
+    <color name="helperColor">#00FF0000</color>
+
 
 </resources>

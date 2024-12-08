@@ -1,16 +1,12 @@
 package ru.netology.nework.presentation
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import ru.netology.nework.data.EventListRepositoryImpl
-import ru.netology.nework.data.PostListRepositoryImpl
-import ru.netology.nework.data.UserListRepositoryImpl
+import ru.netology.nework.data.repository.EventListRepositoryImpl
+import ru.netology.nework.data.repository.PostListRepositoryImpl
+import ru.netology.nework.data.repository.UserListRepositoryImpl
 import ru.netology.nework.domain.event.GetEventListUseCase
 import ru.netology.nework.domain.post.GetPostListUseCase
-import ru.netology.nework.domain.post.Post
 import ru.netology.nework.domain.user.GetUserListUseCase
-import ru.netology.nework.domain.user.UserListRepository
 
 class MainViewModel: ViewModel() {
 

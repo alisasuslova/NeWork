@@ -1,47 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Widget.AppTheme.LikeCheckBox"
-        parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+    <style name="Widget.AppTheme.LikeCheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
         <item name="iconTint">@color/colorPrimary</item>
 
 
     </style>
 
-    <style name="Widget.MaterialComponents.CompoundButton.CheckBox"
-        parent="Widget.AppCompat.CompoundButton.CheckBox">
+    <style name="Widget.MaterialComponents.CompoundButton.CheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="enforceMaterialTheme">true</item>
         <item name="useMaterialThemeColors">true</item>
         <item name="android:minWidth">?attr/minTouchTargetSize</item>
         <item name="android:minHeight">?attr/minTouchTargetSize</item>
     </style>
 
-    <style name="fabstyle" parent="Base.Theme.NeWork">
-        <item name="android:backgroundTint">@color/colorAppBar</item>
-        <item name="cornerSize">20%</item>
-    </style>
 
-    <style name="appBarstyle" parent="Base.Theme.NeWork">
-        <item name="android:backgroundTint">@color/colorPrimaryContainer</item>
-    </style>
+
+
 
     <style name="fabStyle" parent="Widget.Design.FloatingActionButton">
+        <item name="android:backgroundTint">@color/colorAppBar</item>
         <item name="shapeAppearanceOverlay">@style/fabShape</item>
     </style>
-    
-    
-    
     <style name="fabShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerSize">20%</item>
-
-    </style>
-    <style name="buttomRemove" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="color">@color/colorPrimary</item>
+        <item name="cornerSize">35%</item>
 
     </style>
 
-    <style name="buttomDone" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="color">@color/black</item>
 
+    <style name="appBarStyle" parent="Base.Theme.NeWork">
+        <item name="android:backgroundTint">@color/colorPrimaryContainer</item>
+
+    </style>
+
+    <style name="appBarTextStyle" parent="Base.Theme.NeWork">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+
+    <style name="backButton"
+        parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="iconTint">@color/selector</item>
+    </style>
+
+    <style name="textView" parent="Theme.MaterialComponents">
+        <item name="android:background">@color/colorTextView</item>
+        <item name="height">56dp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="helperTextTextColor">@color/helperColor</item>
+        <item name="helperTextEnabled">false</item>
+    </style>
+
+    <style name="materialButton" parent="Theme.MaterialComponents">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="cornerRadius">35dp</item>
+        <item name="height">56dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+    <style name="navMenuStyle"
+        parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+        <item name="iconTint">@color/selector_nav_menu</item>
     </style>
 </resources>
