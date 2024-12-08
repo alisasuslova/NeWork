@@ -1,4 +1,4 @@
-package ru.netology.nework.presentation
+package ru.netology.nework.ui
 
 import androidx.lifecycle.ViewModel
 import ru.netology.nework.data.repository.EventListRepositoryImpl

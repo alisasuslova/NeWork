@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailPostFragment">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarDetailPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Toolbar
+            android:id="@+id/toolbarPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAppBar"
+            android:elevation="0dp"
+            android:minHeight="?attr/actionBarSize">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/backButton"
+                    style="@style/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/back_button"
+                    app:icon="@drawable/baseline_arrow_back_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/newPostTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/newPostTitle"
+                    style="@style/appBarTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/detail_post_title"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/backButton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/createPostButton"
+                    style="@style/backButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/share_post_button"
+                    app:icon="@drawable/baseline_account_circle_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarDetailPost"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/author_avatar"
+            android:src="@drawable/baseline_account_circle_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/authorName"
+            android:layout_width="0sp"
+            android:layout_height="24sp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/author_name"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintTop_toTopOf="@+id/avatar"
+            />
+
+        <TextView
+            android:id="@+id/authorJob"
+            android:layout_width="0dp"
+            android:layout_height="24sp"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@string/author_job"
+            app:layout_constraintStart_toEndOf="@+id/avatar"
+            app:layout_constraintBottom_toBottomOf="@+id/avatar"
+            />
+
+        <ImageView
+            android:id="@+id/postImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="145dp"
+            android:contentDescription="@string/post_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorJob" />
+
+        <TextView
+            android:id="@+id/published"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/published"
+            android:lines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postImage"
+            style="@style/textViewMargin"/>
+
+        <TextView
+            android:id="@+id/postText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/post_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/published"
+            style="@style/textViewMargin"/>
+
+        <TextView
+            android:id="@+id/postLikers"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text="@string/likers"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postText"
+            style="@style/textViewMargin"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/likes"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:checkable="true"
+            android:contentDescription="@string/description_post_like"
+            app:icon="@drawable/heart_like_purple_20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postLikers"
+            tools:text="2"
+            android:textColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/avatarConteiner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/likes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/likes">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/plusPostButton"
+                style="@style/fabStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/description_button_plus_post"
+                app:srcCompat="@drawable/ic_ok_24dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/postMentioned"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text="@string/mentioned"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/likes"
+            style="@style/textViewMargin"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mentioned"
+            style="@style/Widget.AppTheme.LikeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:checkable="true"
+            android:contentDescription="@string/mentioned"
+            app:icon="@drawable/ic_mentioned"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postMentioned"
+            tools:text="2"
+            android:textColor="@color/colorPrimary"/>
+
+        <LinearLayout
+            android:id="@+id/avatarConteiner2"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toEndOf="@+id/likes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/mentioned">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/plusPostButton2"
+                style="@style/fabStyle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="@string/description_button_plus_post"
+                app:srcCompat="@drawable/ic_ok_24dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mentioned"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package ru.netology.nework.presentation
+package ru.netology.nework.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import ru.netology.nework.R
 
-
-class RegistrationFragment : Fragment() {
+class NewPost : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +15,7 @@ class RegistrationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_new_post, container, false)
     }
 
 

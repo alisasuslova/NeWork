@@ -1,56 +1,35 @@
-package ru.netology.nework.presentation
+package ru.netology.nework.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import ru.netology.nework.R
-import ru.netology.nework.databinding.FragmentPostsBinding
+import ru.netology.nework.databinding.FragmentEventsBinding
 
-class PostsFragment : Fragment() {
 
-    private var _binding: FragmentPostsBinding? = null
-    private val binding: FragmentPostsBinding
-        get() = _binding ?: throw RuntimeException("PostsFragment == null")
+class EventsFragment : Fragment() {
+
+    private var _binding: FragmentEventsBinding? = null
+    private val binding: FragmentEventsBinding
+        get() = _binding ?: throw RuntimeException("EventsFragment == null")
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentPostsBinding.inflate(inflater, container, false)
-
-
-
-        binding.listPosts.apply {
-            findNavController().navigate(
-                R.id.action_postsFragment_to_newPost)
-
-        }
-
-
-
-
-
-
-
-
-
-
+        _binding = FragmentEventsBinding.inflate(inflater, container, false)
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
     }
 
-    /*private fun launchEventsFragment() {
+    /*private fun launchPostsFragment() {
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, EventsFragment.newInstanceEvent())
+            .replace(R.id.fragment_container, PostsFragment.newInstancePost())
             .addToBackStack(null)
             .commit()
     }
@@ -60,9 +39,8 @@ class PostsFragment : Fragment() {
             .replace(R.id.fragment_container, UsersFragment.newInstanceUser())
             .addToBackStack(null)
             .commit()
-    }*/
-
-
+    }
+*/
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -70,8 +48,8 @@ class PostsFragment : Fragment() {
 
     companion object {
 
-        val TAG: String = PostsFragment::class.java.simpleName
-        fun newInstancePost() = PostsFragment()
+        val TAG: String = EventsFragment::class.java.simpleName
+        fun newInstanceEvent() = EventsFragment()
 
     }
 }

@@ -1,16 +1,9 @@
-package ru.netology.nework.presentation
+package ru.netology.nework.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
-import ru.netology.nework.R
 import ru.netology.nework.databinding.ActivityMainBinding
-import ru.netology.nework.databinding.FragmentPostsBinding
 
 class MainActivity : AppCompatActivity() {
 

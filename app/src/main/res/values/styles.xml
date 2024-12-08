@@ -74,4 +74,9 @@
         parent="Widget.MaterialComponents.CompoundButton.CheckBox">
         <item name="iconTint">@color/selector_nav_menu</item>
     </style>
+
+    <style name="textViewMargin" parent="Theme.MaterialComponents">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
 </resources>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".presentation.MainActivity"
+    tools:context=".ui.MainActivity"
     android:padding="20dp">
 
     <ImageView
@@ -18,10 +18,10 @@
         app:srcCompat="@drawable/ic_launcher_foreground" />
 
     <TextView
-        android:id="@+id/author"
+        android:id="@+id/authorName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/author"
+        android:text="@string/author_name"
         android:layout_marginStart="16dp"
         android:lines="1"
         android:ellipsize="end"
@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login"
         android:layout_marginStart="16dp"
-        app:layout_constraintTop_toBottomOf="@id/author"
+        app:layout_constraintTop_toBottomOf="@id/authorName"
         app:layout_constraintStart_toEndOf="@id/avatar"
         />
 
