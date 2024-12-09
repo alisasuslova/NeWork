@@ -63,6 +63,7 @@
     <string name="event_image">Event Image</string>
     <string name="author_avatar">Author Avatar</string>
     <string name="post_text">Post text</string>
+    <string name="event_text">Event text</string>
     <string name="likers">Likers</string>
 
 </resources>

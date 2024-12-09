@@ -23,11 +23,11 @@ class PostsFragment : Fragment() {
 
 
 
-        binding.listPosts.apply {
+        /*binding.listPosts.apply {
             findNavController().navigate(
                 R.id.action_postsFragment_to_newPost)
 
-        }
+        }*/
 
 
 

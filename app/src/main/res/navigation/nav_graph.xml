@@ -25,15 +25,15 @@
             app:popEnterAnim="@android:anim/slide_in_left"
             app:popExitAnim="@android:anim/slide_out_right" />
         <action
-            android:id="@+id/action_postsFragment_to_newPost"
-            app:destination="@id/newPost"
+            android:id="@+id/action_postsFragment_to_detailPostFragment"
+            app:destination="@id/detailPostFragment"
             app:enterAnim="@android:anim/slide_out_right"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right" />
+            app:popExitAnim="@android:anim/slide_out_right"/>
         <action
-            android:id="@+id/action_postsFragment_to_detailPostFragment"
-            app:destination="@id/detailPostFragment"
+            android:id="@+id/action_postsFragment_to_newPost"
+            app:destination="@id/newPost"
             app:enterAnim="@android:anim/slide_out_right"
             app:exitAnim="@android:anim/slide_out_right"
             app:popEnterAnim="@android:anim/slide_in_left"
